@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden !important;
+}
+
+body {
+    background: url('/img/Background.jpg');
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 9.38rem;
+    height: 9.38rem;
+    margin: 1.88rem 0rem 0rem 2.38rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between !important;
+    list-style: none;
+    margin: 3.13rem 1.13rem 0rem 0rem !important;
+}
+
+.nav li a {
+    text-decoration: none;
+    margin: 0rem 0.75rem 0rem 0.75rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.50rem;
+    color: #8B7871;
+}
+
+.nav li a.active {
+    color: rgba(98, 60, 2, 0.7);
+    font-weight: bolder;
+}
+
+.glass {
+    position: absolute;
+    left: 23.44rem;
+    top: 5.00rem;
+    width: 100%;
+}
+
+.message {
+    position: absolute;
+    width: 39.56rem;
+    height: 12.25rem;
+    left: 7.63rem;
+    top: 15.75rem;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.00rem;
+    color: rgba(200, 88, 24, 0.753);
+}
+
+.btn {
+    width: 300px;
+    height: 50px;
+    background: rgba(245, 202, 137, 0.582);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background: rgba(245, 202, 137, 0.212);
+    cursor: pointer;
+}
+
+.glassMobile {
+    display: none;
+}
+
+.glassMobile2 {
+    display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.mobileView {
+    display: none;
+}
+
+.view {
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 30.0rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    top: 10.44rem;
+    bottom: 5.0rem;
+    overflow-y: scroll;
+}
+
+.firstRow {
+    /* margin-left: 50px; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    /* width: 70%; */
+}
+
+.secondRow {
+    /* margin-left: 50px; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    /* width: 70%; */
+}
+
+.animate {
+    animation-name: vanish;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vanish {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.animateReverse {
+    animation-name: vanishReverse;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vanishReverse {
+    from {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background: url('/img/Backgroundmobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden !important;
+    }
+
+    .glassMobile {
+        display: block;
+        position: absolute;
+        width: 458.95px;
+        height: 235px;
+        left: 156px;
+        top: 12.63rem;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 5.38rem;
+        height: 5.38rem;
+        margin: 1.88rem 0rem 0rem 1.38rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 3.13rem 3.13rem 0rem 0rem;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        margin: 0rem 1.45rem 0rem 0.45rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.20rem;
+        color: rgb(214 102 42);
+    }
+
+    .nav li a.active {
+        color: rgb(133, 63, 26);
+        font-weight: bolder;
+    }
+
+    .glass {
+        display: none;
+    }
+
+    .glassMobile2 {
+        display: none;
+    }
+
+    .message {
+        position: absolute;
+        width: 22.38rem;
+        height: 6.94rem;
+        left: 5.25rem;
+        top: 18.25rem;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.25rem;
+
+        color: rgba(200, 88, 24, 0.788);
+    }
+
+    .btn {
+        width: 300px;
+        height: 50px;
+        background: rgba(245, 202, 137, 0.582);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        border: none;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+        color: #ffffff;
+    }
+
+    .btn:hover {
+        background: rgba(245, 202, 137, 0.212);
+        cursor: pointer;
+    }
+
+    .view {
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 8.0rem;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 10.44rem;
+        overflow-y: visible;
+    }
+
+    .mobileView {
+        display: none;
+    }
+} 
+
+@media only screen and (max-width: 500px) {
+    body {
+        background: url('/img/Background.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        overflow: hidden !important;
+    }
+
+    .glassMobile {
+        display: none
+    }
+
+    .glassMobile2 {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 5.38rem;
+        height: 5.38rem;
+        margin: 1.88rem 0rem 0rem 1.38rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 3.13rem 3.13rem 0rem 0rem;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        margin: 0rem 1.45rem 0rem 0.45rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.20rem;
+        color: rgb(214 102 42);
+    }
+
+    .nav li a.active {
+        color: rgb(133, 63, 26);
+        font-weight: bolder;
+    }
+
+    .glass {
+        display: none;
+    }
+
+    .message {
+        position: absolute;
+        width: 358px;
+        height: 110.85px;
+        left: 34px;
+        top: 243px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.0rem;
+
+        color: rgba(200, 88, 24, 0.788);
+    }
+
+    .btn {
+        width: 300px;
+        height: 50px;
+        background: rgba(245, 202, 137, 0.582);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        border: none;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+        color: #ffffff;
+    }
+
+    .btn:hover {
+        background: rgba(245, 202, 137, 0.212);
+        cursor: pointer;
+    }
+
+    .view {
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 8.0rem;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: 10.44rem;
+        overflow-y: visible;
+    }
+
+    .mobileView {
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 30.00rem;
+        top: 10.44rem;
+        overflow-y: scroll;
+    }
+}
+
+@keyframes imageAnimate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.imageAnimate {
+    animation-name: imageAnimate;
+    animation-duration: 3s;
+}
+
+@keyframes imageAnimateReverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.imageAnimateReverse {
+    animation-name: imageAnimateReverse;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#home {
+    display: none;
+}
