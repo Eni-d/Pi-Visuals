@@ -186,6 +186,52 @@ body {
     }
 }
 
+.about {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 4rem;
+    top: 3.56rem;
+}
+
+.about img {
+    width: 90%;
+    height: auto;
+}
+
+@keyframes aboutAnimate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.aboutAnimate {
+    animation-name: aboutAnimate;
+    animation-duration: 3s;
+}
+
+@keyframes aboutAnimateReverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.aboutAnimateReverse {
+    animation-name: imageAnimateReverse;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
 @media only screen and (max-width: 768px) {
     body {
         background: url('/img/Backgroundmobile.jpg');
@@ -296,6 +342,20 @@ body {
 
     .mobileView {
         display: none;
+    }
+
+    .about {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0rem;
+        top: 10rem;
+    }
+
+    .about img {
+        width: 100%;
+        height: auto;
     }
 } 
 
