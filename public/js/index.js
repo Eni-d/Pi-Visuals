@@ -2,6 +2,7 @@ let catalogue = document.getElementById('catalogue')
 let home = document.getElementById('home')
 let about = document.getElementById('about')
 let aboutContent = document.querySelector('.about')
+let mobileAbout = document.querySelector('.aboutMobile')
 let message = document.querySelector('.message')
 let glass = document.querySelector('.glass')
 let glassMobile = document.querySelector('.glassMobile')
@@ -60,11 +61,15 @@ home.addEventListener('click', (e) => {
             viewMobileImg[i].classList.remove('imageAnimate')
             viewMobileImg[i].classList.add('imageAnimateReverse')
         }
-        aboutContent.classList.add('aboutAnimateReverse')
-        aboutContent.classList.remove('aboutAnimate')
+        // aboutContent.classList.add('aboutAnimateReverse')
+        // aboutContent.classList.remove('aboutAnimate')
+        mobileAbout.classList.add('aboutAnimateReverse')
+        mobileAbout.classList.remove('aboutAnimate')
         setTimeout(() => {
             mobileView.style.display = 'none'
-            aboutContent.style.display = 'none'
+            mobileAbout.style.display = 'none'
+            // aboutContent.style.display = 'none'
+            mobileAbout.style.display = 'none'
             message.classList.remove('animate')
             message.classList.add('animateReverse')
             glass.classList.remove('animate')
@@ -81,9 +86,12 @@ home.addEventListener('click', (e) => {
         }
         aboutContent.classList.add('aboutAnimateReverse')
         aboutContent.classList.remove('aboutAnimate')
+        // mobileAbout.classList.add('aboutAnimateReverse')
+        // mobileAbout.classList.remove('aboutAnimate')
         setTimeout(() => {
             view.style.display = 'none'
             aboutContent.style.display = 'none'
+            // mobileAbout.style.display = 'none'
             message.classList.remove('animate')
             glass.classList.remove('animate')
             glassMobile.classList.remove('animate')
@@ -101,10 +109,14 @@ about.addEventListener('click', (e) => {
     e.preventDefault()
     about.style.display = 'none'
     home.style.display = 'block'
-    aboutContent.style.display = 'block'
+    // aboutContent.style.display = 'block'
+    
     if (window.innerWidth <= '500') {
+        mobileAbout.style.display = 'block'
         aboutContent.classList.remove('aboutAnimateReverse')
         aboutContent.classList.add('aboutAnimate')
+        mobileAbout.classList.remove('aboutAnimateReverse')
+        mobileAbout.classList.add('aboutAnimate')
         message.classList.remove('animateReverse')
         glass.classList.remove('animateReverse')
         glassMobile.classList.remove('animateReverse')
@@ -121,8 +133,11 @@ about.addEventListener('click', (e) => {
         //     }
         // }, 2000)
     } else {
+        aboutContent.style.display = 'block'
         aboutContent.classList.remove('aboutAnimateReverse')
         aboutContent.classList.add('aboutAnimate')
+        mobileAbout.classList.remove('aboutAnimateReverse')
+        mobileAbout.classList.add('aboutAnimate')
         message.classList.remove('animateReverse')
         glass.classList.remove('animateReverse')
         glassMobile.classList.remove('animateReverse')

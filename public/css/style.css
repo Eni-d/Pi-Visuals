@@ -232,6 +232,10 @@ body {
     animation-fill-mode: forwards;
 }
 
+.aboutMobile {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     body {
         background: url('/img/Backgroundmobile.jpg');
@@ -475,6 +479,22 @@ body {
         top: 10.44rem;
         overflow-y: scroll;
     }
+
+    .about {
+        display: none;
+    }
+
+    .aboutMobile {
+        display: none;
+        width: 100%;
+        position: absolute;
+        width: 100%;
+        left: 2rem;
+        height: 30.00rem;
+        top: 7.44rem;
+        overflow-y: scroll;
+    }
+
 }
 
 @keyframes imageAnimate {
